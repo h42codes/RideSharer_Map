@@ -15,10 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="l72-g3-mIX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d9N-Uc-dM8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KcG-D5-2mR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d9N-Uc-dM8" firstAttribute="leading" secondItem="KcG-D5-2mR" secondAttribute="leading" id="7AM-Xa-Na2"/>
+                            <constraint firstItem="d9N-Uc-dM8" firstAttribute="top" secondItem="KcG-D5-2mR" secondAttribute="top" id="7e4-gS-Hhu"/>
+                            <constraint firstItem="d9N-Uc-dM8" firstAttribute="top" secondItem="l72-g3-mIX" secondAttribute="topMargin" id="MSS-ds-c5i"/>
+                            <constraint firstItem="KcG-D5-2mR" firstAttribute="trailing" secondItem="d9N-Uc-dM8" secondAttribute="trailing" id="tmw-ZV-XwT"/>
+                            <constraint firstItem="KcG-D5-2mR" firstAttribute="bottom" secondItem="d9N-Uc-dM8" secondAttribute="bottom" id="yxV-Cp-lhe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a8J-GL-ACx"/>
+                    <connections>
+                        <outlet property="mapView" destination="d9N-Uc-dM8" id="Lo6-cZ-7pi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPk-mo-08m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
