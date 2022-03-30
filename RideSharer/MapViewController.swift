@@ -40,7 +40,7 @@ class MapViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
             mapView.showsUserLocation = true
         case .restricted:
-            showPermissionDeniedAlert()
+            break
         case .authorizedAlways:
             break
         default:
@@ -49,7 +49,7 @@ class MapViewController: UIViewController {
     }
     
     func showPermissionDeniedAlert() {
-        let alert = UIAlertController(title: "Permission required", message: "Location authorization needed to use RideSharer", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Permission denied", message: "Location authorization needed to use RideSharer. Please change system settings.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         
